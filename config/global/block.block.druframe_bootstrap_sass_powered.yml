@@ -1,0 +1,22 @@
+uuid: 4c8618e1-0868-4a6c-a926-abcf898eec82
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - druframe_bootstrap_sass
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: druframe_bootstrap_sass_powered
+theme: druframe_bootstrap_sass
+region: footer_fifth
+weight: -7
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: fcac12bf-db8f-4e0b-80cd-9fa4640b4667
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - druframe_bootstrap_sass
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: druframe_bootstrap_sass_content
+theme: druframe_bootstrap_sass
+region: content
+weight: -4
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

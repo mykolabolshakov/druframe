@@ -1,0 +1,7 @@
+druframe_offer.config:
+  path: '/admin/config/druframe_offer/adminsettings/druframe-offer'
+  defaults:
+    _title: 'Offer platform global settings'
+    _form: '\Drupal\druframe_offer\Form\CustomConfigForm'
+  requirements:
+    _permission: 'administer druframe_offer configuration'

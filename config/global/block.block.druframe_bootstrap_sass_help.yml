@@ -1,0 +1,22 @@
+uuid: 90236838-f84a-47b7-ba8e-b7fa53476fe4
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - druframe_bootstrap_sass
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: druframe_bootstrap_sass_help
+theme: druframe_bootstrap_sass
+region: footer_third
+weight: -7
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

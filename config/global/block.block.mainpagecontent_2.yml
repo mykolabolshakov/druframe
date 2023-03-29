@@ -1,0 +1,20 @@
+uuid: 6b39e945-f0dc-4bc4-82f3-69d0509edf31
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - druframe_bootstrap_sass
+id: mainpagecontent_2
+theme: druframe_bootstrap_sass
+region: sidebar_second
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: '2nd SITEBAR'
+  label_display: visible
+  provider: system
+visibility: {  }

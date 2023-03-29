@@ -1,0 +1,22 @@
+uuid: cbacf9f1-7b4e-4b3a-97de-e0c5b0213309
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - druframe_bootstrap_sass
+_core:
+  default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
+id: druframe_bootstrap_sass_breadcrumbs
+theme: druframe_bootstrap_sass
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,165 @@
+uuid: ba1a3405-48b5-450d-b823-50210f0b3904
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_media_links
+  theme:
+    - druframe_bootstrap_sass
+id: socialmedialinks
+theme: druframe_bootstrap_sass
+region: secondary_menu
+weight: 0
+provider: null
+plugin: social_media_links_block
+settings:
+  id: social_media_links_block
+  label: 'Social Media Links'
+  label_display: '0'
+  provider: social_media_links
+  platforms:
+    googleplus:
+      value: ''
+      description: ''
+      weight: '-10'
+    rss:
+      value: ''
+      description: ''
+      weight: '-9'
+    facebook:
+      value: DruFrame
+      description: ''
+      weight: '-8'
+    website:
+      value: ''
+      description: ''
+      weight: '-7'
+    googleplay:
+      value: ''
+      description: ''
+      weight: '-6'
+    drupal:
+      value: ''
+      description: ''
+      weight: '-5'
+    vimeo:
+      value: ''
+      description: ''
+      weight: '-4'
+    whatsapp:
+      value: ''
+      description: ''
+      weight: '-3'
+    meetup:
+      value: ''
+      description: ''
+      weight: '-2'
+    youtube:
+      value: DruFrame
+      description: ''
+      weight: '-1'
+    linkedin:
+      value: ''
+      description: ''
+      weight: '0'
+    twitter:
+      value: ''
+      description: ''
+      weight: '1'
+    tumblr:
+      value: ''
+      description: ''
+      weight: '2'
+    tiktok:
+      value: ''
+      description: ''
+      weight: '3'
+    amazon:
+      value: ''
+      description: ''
+      weight: '4'
+    patreon:
+      value: ''
+      description: ''
+      weight: '5'
+    telegram:
+      value: DruFrame
+      description: ''
+      weight: '6'
+    email:
+      value: ''
+      description: ''
+      weight: '7'
+    vkontakte:
+      value: ''
+      description: ''
+      weight: '8'
+    github:
+      value: ''
+      description: ''
+      weight: '9'
+    gitlab:
+      value: ''
+      description: ''
+      weight: '10'
+    slideshare:
+      value: ''
+      description: ''
+      weight: '11'
+    instagram:
+      value: DruFrame
+      description: ''
+      weight: '12'
+    bitbucket:
+      value: ''
+      description: ''
+      weight: '13'
+    youtube_channel:
+      value: ''
+      description: ''
+      weight: '14'
+    behance:
+      value: ''
+      description: ''
+      weight: '15'
+    contact:
+      value: ''
+      description: ''
+      weight: '16'
+    flickr:
+      value: ''
+      description: ''
+      weight: '17'
+    mastodon:
+      value: ''
+      description: ''
+      weight: '18'
+    xing:
+      value: ''
+      description: ''
+      weight: '19'
+    pinterest:
+      value: ''
+      description: ''
+      weight: '20'
+    glassdoor:
+      value: ''
+      description: ''
+      weight: '21'
+    goodreads:
+      value: ''
+      description: ''
+      weight: '22'
+  appearance:
+    orientation: h
+    show_name: 0
+    suggestion: ''
+  link_attributes:
+    target: '<none>'
+    rel: '<none>'
+  iconset:
+    style: 'fontawesome:2x'
+    installed_iconsets:
+      fontawesome:
+        examples: ''
+visibility: {  }

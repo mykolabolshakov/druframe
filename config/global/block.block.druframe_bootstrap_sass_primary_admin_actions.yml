@@ -1,0 +1,20 @@
+uuid: bb39ca09-8031-4210-ac1f-c524b6a6acfc
+langcode: en
+status: true
+dependencies:
+  theme:
+    - druframe_bootstrap_sass
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: druframe_bootstrap_sass_primary_admin_actions
+theme: druframe_bootstrap_sass
+region: content
+weight: -7
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

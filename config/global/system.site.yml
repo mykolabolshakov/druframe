@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
+langcode: en
+uuid: 2cedd43f-205c-4c74-941b-8a3b451631f9
+name: DruFrame
+mail: admin@druframe.local
+slogan: "Let's learn Drupal as Framework!"
+page:
+  403: ''
+  404: ''
+  front: /home
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en

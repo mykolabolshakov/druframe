@@ -1,0 +1,20 @@
+uuid: 4fc52d19-133d-4aa3-8285-d6827a4cf1bf
+langcode: en
+status: true
+dependencies:
+  theme:
+    - druframe_bootstrap_sass
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: druframe_bootstrap_sass_page_title
+theme: druframe_bootstrap_sass
+region: content
+weight: -8
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

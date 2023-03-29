@@ -1,0 +1,6 @@
+druframe_offer.config:
+  title: 'DruFrame CUSTOM Offer global settings'
+  route_name: druframe_offer.config
+  description: 'Global settings for the offer platform'
+  parent: system.admin_config_system
+  weight: 99
