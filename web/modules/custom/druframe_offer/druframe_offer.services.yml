@@ -1,0 +1,5 @@
+services:
+  druframe_offer.commands:
+    class: \Drupal\druframe_offer\Commands\SeedGeneratorCommand
+    tags:
+      - { name: drush.command }

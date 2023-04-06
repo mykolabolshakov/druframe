@@ -30,3 +30,12 @@ function druframe_bootstrap_sass_form_system_theme_settings_alter(&$form, FormSt
     'bg-transparent' => t('Transparent'),
   );
 }
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function druframe_bootstrap_sass_preprocess_html(&$variables) {
+  $variables['druframe_offer_tagmanager'] =
+    \Drupal::config('druframe_offer.custom_config_form')
+      ->get('tagmanager');
+}
