@@ -4,3 +4,9 @@ druframe_offer.config:
   description: 'Global settings for the offer platform'
   parent: system.admin_config_system
   weight: 99
+
+entity.druframe_offer_type.collection:
+  title: 'DruFrame Offer types'
+  description: 'Manage and CRUD actions on DruFrame Offer type.'
+  parent: system.admin_structure
+  route_name: entity.druframe_offer_type.collection

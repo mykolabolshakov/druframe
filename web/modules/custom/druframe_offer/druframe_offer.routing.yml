@@ -6,34 +6,34 @@ druframe_offer.config:
   requirements:
     _permission: 'administer druframe_offer configuration'
 
-druframe_offer.add:
-  path: '/druframe-offer/create'
-  defaults:
-    _entity_form: druframe_offer.add
-    _title: 'Add Druframe Offer'
-  requirements:
-    _entity_create_access: 'druframe_offer'
-
-entity.druframe_offer.edit_form:
-  path: '/druframe-offer/{druframe_offer}/edit'
-  defaults:
-    _entity_form: druframe_offer.edit
-    _title: 'Edit Druframe Offer'
-  requirements:
-    _entity_access: 'druframe_offer.edit'
-
-entity.druframe_offer.delete_form:
-  path: '/druframe-offer/{druframe_offer}/delete'
-  defaults:
-    _entity_form: druframe_offer.delete
-    _title: 'Delete Druframe Offer'
-  requirements:
-    _entity_access: 'druframe_offer.delete'
-
-entity.druframe_offer.canonical:
-  path: '/druframe-offers/{druframe_offer}'
-  defaults:
-    _entity_view: 'druframe_offer'
-    _title: 'Druframe Offer'
-  requirements:
-    _entity_access: 'druframe_offer.view'
+#druframe_offer.add:
+#  path: '/druframe-offer/create'
+#  defaults:
+#    _entity_form: druframe_offer.add
+#    _title: 'Add Druframe Offer'
+#  requirements:
+#    _entity_create_access: 'druframe_offer'
+#
+#entity.druframe_offer.edit_form:
+#  path: '/druframe-offer/{druframe_offer}/edit'
+#  defaults:
+#    _entity_form: druframe_offer.edit
+#    _title: 'Edit Druframe Offer'
+#  requirements:
+#    _entity_access: 'druframe_offer.edit'
+#
+#entity.druframe_offer.delete_form:
+#  path: '/druframe-offer/{druframe_offer}/delete'
+#  defaults:
+#    _entity_form: druframe_offer.delete
+#    _title: 'Delete Druframe Offer'
+#  requirements:
+#    _entity_access: 'druframe_offer.delete'
+#
+#entity.druframe_offer.canonical:
+#  path: '/druframe-offers/{druframe_offer}'
+#  defaults:
+#    _entity_view: 'druframe_offer'
+#    _title: 'Druframe Offer'
+#  requirements:
+#    _entity_access: 'druframe_offer.view'

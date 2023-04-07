@@ -1,0 +1,5 @@
+entity.mb_entity_type.collection:
+  title: 'Mb entity types'
+  description: 'Manage and CRUD actions on Mb entity type.'
+  parent: system.admin_structure
+  route_name: entity.mb_entity_type.collection

@@ -1,0 +1,26 @@
+entity.druframe_offer.view:
+  title: 'View'
+  route_name: entity.druframe_offer.canonical
+  base_route: entity.druframe_offer.canonical
+entity.druframe_offer.edit_form:
+  title: 'Edit'
+  route_name: entity.druframe_offer.edit_form
+  base_route: entity.druframe_offer.canonical
+entity.druframe_offer.delete_form:
+  title: 'Delete'
+  route_name: entity.druframe_offer.delete_form
+  base_route: entity.druframe_offer.canonical
+  weight: 10
+entity.druframe_offer.collection:
+  title: 'DruFrame Offers'
+  route_name: entity.druframe_offer.collection
+  base_route: system.admin_content
+  weight: 10
+entity.druframe_offer_type.edit_form:
+  title: 'Edit'
+  route_name: entity.druframe_offer_type.edit_form
+  base_route: entity.druframe_offer_type.edit_form
+entity.druframe_offer_type.collection:
+  title: 'List'
+  route_name: entity.druframe_offer_type.collection
+  base_route: entity.druframe_offer_type.collection

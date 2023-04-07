@@ -1,49 +1,49 @@
 <?php
 
-namespace Drupal\druframe_offer\Entity;
+namespace Drupal\mb_entity\Entity;
 
 use Drupal\Core\Entity\EntityChangedTrait;
 use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Entity\RevisionableContentEntityBase;
 use Drupal\Core\Field\BaseFieldDefinition;
-use Drupal\druframe_offer\DruframeOfferInterface;
+use Drupal\mb_entity\MbEntityInterface;
 use Drupal\user\EntityOwnerTrait;
 
 /**
- * Defines the druframe offer entity class.
+ * Defines the mb entity entity class.
  *
  * @ContentEntityType(
- *   id = "druframe_offer",
- *   label = @Translation("DruFrame Offer"),
- *   label_collection = @Translation("DruFrame Offers"),
- *   label_singular = @Translation("druframe offer"),
- *   label_plural = @Translation("druframe offers"),
+ *   id = "mb_entity",
+ *   label = @Translation("Mb entity"),
+ *   label_collection = @Translation("Mb entities"),
+ *   label_singular = @Translation("mb entity"),
+ *   label_plural = @Translation("mb entities"),
  *   label_count = @PluralTranslation(
- *     singular = "@count druframe offers",
- *     plural = "@count druframe offers",
+ *     singular = "@count mb entities",
+ *     plural = "@count mb entities",
  *   ),
- *   bundle_label = @Translation("DruFrame Offer type"),
+ *   bundle_label = @Translation("Mb entity type"),
  *   handlers = {
- *     "list_builder" = "Drupal\druframe_offer\DruframeOfferListBuilder",
+ *     "list_builder" = "Drupal\mb_entity\MbEntityListBuilder",
  *     "views_data" = "Drupal\views\EntityViewsData",
- *     "access" = "Drupal\druframe_offer\DruframeOfferAccessControlHandler",
+ *     "access" = "Drupal\mb_entity\MbEntityAccessControlHandler",
  *     "form" = {
- *       "add" = "Drupal\druframe_offer\Form\DruframeOfferForm",
- *       "edit" = "Drupal\druframe_offer\Form\DruframeOfferForm",
+ *       "add" = "Drupal\mb_entity\Form\MbEntityForm",
+ *       "edit" = "Drupal\mb_entity\Form\MbEntityForm",
  *       "delete" = "Drupal\Core\Entity\ContentEntityDeleteForm",
  *     },
  *     "route_provider" = {
  *       "html" = "Drupal\Core\Entity\Routing\AdminHtmlRouteProvider",
  *     }
  *   },
- *   base_table = "druframe_offer",
- *   data_table = "druframe_offer_field_data",
- *   revision_table = "druframe_offer_revision",
- *   revision_data_table = "druframe_offer_field_revision",
+ *   base_table = "mb_entity",
+ *   data_table = "mb_entity_field_data",
+ *   revision_table = "mb_entity_revision",
+ *   revision_data_table = "mb_entity_field_revision",
  *   show_revision_ui = TRUE,
  *   translatable = TRUE,
- *   admin_permission = "administer druframe offer types",
+ *   admin_permission = "administer mb entity types",
  *   entity_keys = {
  *     "id" = "id",
  *     "revision" = "revision_id",
@@ -59,18 +59,18 @@ use Drupal\user\EntityOwnerTrait;
  *     "revision_log_message" = "revision_log",
  *   },
  *   links = {
- *     "collection" = "/admin/content/druframe-offer",
- *     "add-form" = "/druframe-offer/add/{druframe_offer_type}",
- *     "add-page" = "/druframe-offer/add",
- *     "canonical" = "/druframe-offer/{druframe_offer}",
- *     "edit-form" = "/druframe-offer/{druframe_offer}/edit",
- *     "delete-form" = "/druframe-offer/{druframe_offer}/delete",
+ *     "collection" = "/admin/content/mb-entity",
+ *     "add-form" = "/mb-entity/add/{mb_entity_type}",
+ *     "add-page" = "/mb-entity/add",
+ *     "canonical" = "/mb-entity/{mb_entity}",
+ *     "edit-form" = "/mb-entity/{mb_entity}/edit",
+ *     "delete-form" = "/mb-entity/{mb_entity}/delete",
  *   },
- *   bundle_entity_type = "druframe_offer_type",
- *   field_ui_base_route = "entity.druframe_offer_type.edit_form",
+ *   bundle_entity_type = "mb_entity_type",
+ *   field_ui_base_route = "entity.mb_entity_type.edit_form",
  * )
  */
-class DruframeOffer extends RevisionableContentEntityBase implements DruframeOfferInterface {
+class MbEntity extends RevisionableContentEntityBase implements MbEntityInterface {
 
   use EntityChangedTrait;
   use EntityOwnerTrait;
@@ -176,7 +176,7 @@ class DruframeOffer extends RevisionableContentEntityBase implements DruframeOff
     $fields['created'] = BaseFieldDefinition::create('created')
       ->setLabel(t('Authored on'))
       ->setTranslatable(TRUE)
-      ->setDescription(t('The time that the druframe offer was created.'))
+      ->setDescription(t('The time that the mb entity was created.'))
       ->setDisplayOptions('view', [
         'label' => 'above',
         'type' => 'timestamp',
@@ -192,7 +192,7 @@ class DruframeOffer extends RevisionableContentEntityBase implements DruframeOff
     $fields['changed'] = BaseFieldDefinition::create('changed')
       ->setLabel(t('Changed'))
       ->setTranslatable(TRUE)
-      ->setDescription(t('The time that the druframe offer was last edited.'));
+      ->setDescription(t('The time that the mb entity was last edited.'));
 
     return $fields;
   }

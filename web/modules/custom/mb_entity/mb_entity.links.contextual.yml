@@ -1,0 +1,10 @@
+entity.mb_entity.edit_form:
+  route_name: entity.mb_entity.edit_form
+  group: mb_entity
+  title: Edit
+
+entity.mb_entity.delete_form:
+  route_name: entity.mb_entity.delete_form
+  group: mb_entity
+  title: Delete
+  weight: 10

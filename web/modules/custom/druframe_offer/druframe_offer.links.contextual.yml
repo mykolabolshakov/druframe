@@ -1,0 +1,10 @@
+entity.druframe_offer.edit_form:
+  route_name: entity.druframe_offer.edit_form
+  group: druframe_offer
+  title: Edit
+
+entity.druframe_offer.delete_form:
+  route_name: entity.druframe_offer.delete_form
+  group: druframe_offer
+  title: Delete
+  weight: 10

@@ -1,0 +1,11 @@
+mb_entity.type_add:
+  title: 'Add mb entity type'
+  route_name: entity.mb_entity_type.add_form
+  appears_on:
+    - entity.mb_entity_type.collection
+
+mb_entity.add_page:
+  title: 'Add mb entity'
+  route_name: entity.mb_entity.add_page
+  appears_on:
+    - entity.mb_entity.collection

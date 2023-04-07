@@ -17,4 +17,8 @@ settings:
   label: '1st SITEBAR'
   label_display: visible
   provider: system
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

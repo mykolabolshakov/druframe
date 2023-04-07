@@ -1,0 +1,11 @@
+druframe_offer.type_add:
+  title: 'Add druframe offer type'
+  route_name: entity.druframe_offer_type.add_form
+  appears_on:
+    - entity.druframe_offer_type.collection
+
+druframe_offer.add_page:
+  title: 'Add druframe offer'
+  route_name: entity.druframe_offer.add_page
+  appears_on:
+    - entity.druframe_offer.collection

@@ -1,2 +1,15 @@
-administer own offers:
-  title: 'Create/edit/delete own offers'
+#administer own offers:
+#  title: 'Create/edit/delete own offers'
+
+administer druframe offer types:
+  title: 'Administer druframe offer types'
+  description: 'Maintain the types of druframe offer entity.'
+  restrict access: true
+delete druframe offer:
+  title: Delete druframe offer
+create druframe offer:
+  title: Create druframe offer
+view druframe offer:
+  title: View druframe offer
+edit druframe offer:
+  title: Edit druframe offer

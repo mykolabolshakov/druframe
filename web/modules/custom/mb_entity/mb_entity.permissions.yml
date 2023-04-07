@@ -1,0 +1,12 @@
+administer mb entity types:
+  title: 'Administer mb entity types'
+  description: 'Maintain the types of mb entity entity.'
+  restrict access: true
+delete mb entity:
+  title: Delete mb entity
+create mb entity:
+  title: Create mb entity
+view mb entity:
+  title: View mb entity
+edit mb entity:
+  title: Edit mb entity

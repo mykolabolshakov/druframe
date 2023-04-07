@@ -1,0 +1,92 @@
+<?php
+
+/**
+ * @file
+ * Provides a druframe offer entity type.
+ */
+
+use Drupal\Core\Render\Element;
+use Drupal\druframe_offer\Entity\DruframeOffer;
+use Drupal\user\UserInterface;
+
+/**
+ * Implements hook_theme().
+ */
+function druframe_offer_theme() {
+  return [
+    'druframe_offer' => [
+      'render element' => 'elements',
+    ],
+  ];
+}
+
+/**
+ * Prepares variables for druframe offer templates.
+ *
+ * Default template: druframe-offer.html.twig.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - elements: An associative array containing the druframe offer information and any
+ *     fields attached to the entity.
+ *   - attributes: HTML attributes for the containing element.
+ */
+function template_preprocess_druframe_offer(array &$variables): void {
+  $variables['view_mode'] = $variables['elements']['#view_mode'];
+  foreach (Element::children($variables['elements']) as $key) {
+    $variables['content'][$key] = $variables['elements'][$key];
+  }
+}
+
+/**
+ * Implements hook_user_cancel().
+ */
+function druframe_offer_user_cancel($edit, UserInterface $account, $method): void {
+  switch ($method) {
+    case 'user_cancel_block_unpublish':
+      // Unpublish druframe offers.
+      $storage = \Drupal::entityTypeManager()->getStorage('druframe_offer');
+      $druframe_offer_ids = $storage->getQuery()
+        ->condition('uid', $account->id())
+        ->condition('status', 1)
+        ->execute();
+      foreach ($storage->loadMultiple($druframe_offer_ids) as $druframe_offer) {
+        $druframe_offer->set('status', FALSE);
+        $druframe_offer->save();
+      }
+      break;
+
+    case 'user_cancel_reassign':
+      // Anonymize druframe offers.
+      $storage = \Drupal::entityTypeManager()->getStorage('druframe_offer');
+      $druframe_offer_ids = $storage->getQuery()
+        ->condition('uid', $account->id())
+        ->execute();
+      foreach ($storage->loadMultiple($druframe_offer_ids) as $druframe_offer) {
+        $druframe_offer->setOwnerId(0);
+        $druframe_offer->save();
+      }
+      break;
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_predelete() for user entities.
+ */
+function druframe_offer_user_predelete(UserInterface $account): void {
+  // Delete druframe offers.
+  $storage = \Drupal::entityTypeManager()->getStorage('druframe_offer');
+  $druframe_offer_ids = $storage->getQuery()
+    ->condition('uid', $account->id())
+    ->execute();
+  $druframe_offers = $storage->loadMultiple($druframe_offer_ids);
+  $storage->delete($druframe_offers);
+  // Delete old revisions.
+  $druframe_offer_ids = $storage->getQuery()
+    ->allRevisions()
+    ->condition('uid', $account->id())
+    ->execute();
+  foreach (array_keys($druframe_offer_ids) as $revision_id) {
+    $storage->deleteRevision($revision_id);
+  }
+}
