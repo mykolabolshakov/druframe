@@ -146,8 +146,8 @@ class Offer extends EditorialContentEntityBase {
    *
    * Makes the current user the owner of the entity
    */
-  public static function preCreate(EntityStorageInterface $storage_controller, array &$values): void {
-    parent::preCreate($storage_controller, $values);
+  public static function preCreate(EntityStorageInterface $storage, array &$values): void {
+    parent::preCreate($storage, $values);
     $values += array(
       'user_id' => \Drupal::currentUser()->id(),
     );
