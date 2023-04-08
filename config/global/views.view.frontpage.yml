@@ -1,4 +1,4 @@
-uuid: e1374330-d04e-496a-9692-c0bb1060be6b
+uuid: dcb7ad6c-699b-4b85-a645-9ffceda7fb88
 langcode: en
 status: true
 dependencies:
@@ -265,7 +265,6 @@ display:
     display_plugin: feed
     position: 2
     display_options:
-      enabled: false
       pager:
         type: some
         options:
@@ -295,15 +294,14 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
-  front_page:
-    id: front_page
-    display_title: 'Home page'
+  page_1:
+    id: page_1
+    display_title: Page
     display_plugin: page
     position: 1
     display_options:
-      display_description: ''
       display_extenders: {  }
-      path: home
+      path: node
     cache_metadata:
       max-age: -1
       contexts:

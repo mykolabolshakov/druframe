@@ -4,10 +4,13 @@ status: true
 dependencies:
   config:
     - filter.format.basic_html
+    - filter.format.html
   module:
     - comment
     - contact
+    - field_ui
     - filter
+    - media
     - offer
     - search
     - shortcut
@@ -23,8 +26,17 @@ permissions:
   - 'access content'
   - 'access shortcuts'
   - 'access site-wide contact form'
+  - 'administer offer display'
+  - 'administer offer fields'
+  - 'administer offer form display'
   - 'administer own offers'
+  - 'create media'
+  - 'delete media'
   - 'post comments'
   - 'search content'
   - 'skip comment approval'
+  - 'update media'
   - 'use text format basic_html'
+  - 'use text format html'
+  - 'view media'
+  - 'view own unpublished media'

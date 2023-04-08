@@ -45,11 +45,12 @@ use Drupal\Core\Entity\EntityStorageInterface;
  *    },
  *  },
  *  links = {
- *    "canonical" = "/offers/{offer}",
+ *    "canonical" = "/offer/{offer}",
  *    "delete-form" = "/offer/{offer}/delete",
  *    "edit-form" = "/offer/{offer}/edit",
  *    "create" = "/offer/create",
  *  },
+ *  field_ui_base_route = "entity.offer.settings",
  *  revision_metadata_keys = {
  *    "revision_user" = "revision_uid",
  *    "revision_created" = "revision_timestamp",
@@ -106,23 +107,23 @@ class Offer extends EditorialContentEntityBase {
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);
 
-    $fields['message'] = BaseFieldDefinition::create('string_long')
-      ->setLabel(t('Message'))
-      ->setRequired(TRUE)
-      ->setDisplayOptions('form', [
-        'type' => 'string_textarea',
-        'weight' => 4,
-        'settings' => [
-          'rows' => 12,
-        ],
-      ])
-      ->setDisplayConfigurable('form', TRUE)
-      ->setDisplayOptions('view', [
-        'type' => 'string',
-        'weight' => 0,
-        'label' => 'above',
-      ])
-      ->setDisplayConfigurable('view', TRUE);
+//    $fields['message'] = BaseFieldDefinition::create('string_long')
+//      ->setLabel(t('Message'))
+//      ->setRequired(TRUE)
+//      ->setDisplayOptions('form', [
+//        'type' => 'string_textarea',
+//        'weight' => 4,
+//        'settings' => [
+//          'rows' => 12,
+//        ],
+//      ])
+//      ->setDisplayConfigurable('form', TRUE)
+//      ->setDisplayOptions('view', [
+//        'type' => 'string',
+//        'weight' => 0,
+//        'label' => 'above',
+//      ])
+//      ->setDisplayConfigurable('view', TRUE);
 
     $fields['status'] = BaseFieldDefinition::create('boolean')
       ->setLabel(t('Publishing status'))
@@ -153,14 +154,14 @@ class Offer extends EditorialContentEntityBase {
   }
 
   /**
-   * {@inheritdoc}
+   * {}
    */
   public function getOwner() {
     return $this->get('user_id')->entity;
   }
 
   /**
-   * {@inheritdoc}
+   * {}
    */
   public function getOwnerId() {
     return $this->get('user_id')->target_id;

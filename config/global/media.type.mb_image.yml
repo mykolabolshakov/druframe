@@ -1,0 +1,13 @@
+uuid: 5a444f39-3ad6-4317-a672-dd242154d479
+langcode: en
+status: true
+dependencies: {  }
+id: mb_image
+label: Image
+description: 'MB Media Type for Images'
+source: image
+queue_thumbnail_downloads: true
+new_revision: true
+source_configuration:
+  source_field: field_media_image
+field_map: {  }

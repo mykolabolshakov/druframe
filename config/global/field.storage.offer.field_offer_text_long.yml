@@ -1,0 +1,19 @@
+uuid: 78744145-f352-45fc-af81-1d657613c7b4
+langcode: en
+status: true
+dependencies:
+  module:
+    - offer
+    - text
+id: offer.field_offer_text_long
+field_name: field_offer_text_long
+entity_type: offer
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -17,6 +17,7 @@ module:
   devel: 0
   devel_entity_updates: 0
   devel_generate: 0
+  druframe_offer: 0
   dynamic_page_cache: 0
   editor: 0
   field: 0
@@ -24,12 +25,13 @@ module:
   file: 0
   filter: 0
   help: 0
-  history: 0
   image: 0
   jquery_ui: 0
   jquery_ui_autocomplete: 0
   jquery_ui_menu: 0
   link: 0
+  media: 0
+  media_library: 0
   menu_link_content: 0
   menu_ui: 0
   module_filter: 0
@@ -44,7 +46,6 @@ module:
   shortcut: 0
   social_media_links: 0
   system: 0
-  taxonomy: 0
   text: 0
   toolbar: 0
   tour: 0
